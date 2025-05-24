@@ -40,7 +40,7 @@ El proyecto UVision de detección de luz ultravioleta incluye un sensor de este 
 
 La variación del voltaje respecto a la intensidad de luz varía en forma **lineal** y puede ser expresada mediante una ecuación, para lo cual es necesario realizar un cálculo aproximado con los datos del fabricante.
 
-# Función aproximada del ML8511
+### Función aproximada del ML8511Ñ
 
 Según la hoja del fabricante del ML8511 (https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/ML8511_3-8-13.pdf) y documentación de ejemplos prácticos (como los de SparkFun), la relación típica es la siguiente:
 
