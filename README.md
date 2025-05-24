@@ -3,6 +3,14 @@
 
 El proyecto de detección de luz ultravioleta UVision consiste en la elaboración de un circuito electrónico usando un Arduino Nano, un sensor UV ML8511, una pantalla tipo OLED LCD 128x64 y un módulo de sonido DFPLayer, todos conectados mediante cables de cobre en una placa protoboard para prototipos de electrónica. 
 
+## Problemática actual
+
+Los deportistas que entrenan o compiten al aire libre enfrentan un grave riesgo de daño por radiación ultravioleta (UV), especialmente por la falta de alertas adecuadas en sus lugares de actividad.
+Los riesgos  incluyen mayor riesgo de cáncer de piel (melanoma), envejecimiento prematuro, y daños oculares como cataratas y la exposición prolongada debilita el sistema inmune de la piel.   
+
+Muchos deportistas y entrenadores subestiman la intensidad del UV, que está presente incluso en días nublados y la ausencia de alertas hace que la población deportiva sea subceptible ya que no hay suficientes sistemas visibles (como el Índice UV en tiempo real) en estadios, parques o rutas de entrenamiento para recordar la necesidad de protección.
+
+
 ## Componentes del Sistema
 
 1.  Arduino Nano:
@@ -12,6 +20,7 @@ El proyecto de detección de luz ultravioleta UVision consiste en la elaboració
 5.  Parlante
 6.  Placa Protoboard y accessorios como caja, chasiss de protección
 7.  Bateria externa USB
+8.  LEDs de notificación 
 
 ## Descripción de la solución:
 
@@ -31,7 +40,7 @@ El proyecto UVision de detección de luz ultravioleta incluye un sensor de este 
 
 La variación del voltaje respecto a la intensidad de luz varía en forma **lineal** y puede ser expresada mediante una ecuación, para lo cual es necesario realizar un cálculo aproximado con los datos del fabricante.
 
-## Función aproximada del ML8511
+# Función aproximada del ML8511
 
 Según la hoja del fabricante del ML8511 (https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/ML8511_3-8-13.pdf) y documentación de ejemplos prácticos (como los de SparkFun), la relación típica es la siguiente:
 
@@ -63,5 +72,5 @@ Este nivel corresponde a la escala de intensidad definida por la OMS, para lo cu
 
 ## Emision de las Alertas :
 
-
+Nival 1-1 Bajo:  Se emite una alerta temporal sonora en el parlante sobre 
 
