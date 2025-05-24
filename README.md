@@ -19,6 +19,11 @@ La solución propuesta hace uso de dispositivos de electrónica para hacer detec
 
 Uno de los elementos centrales del proyecto es el sensor UV ML8511, que es un dispositivo que permite medir la intensidad de la luz ultravioleta (UV) y el cual es muy utilizado en proyectos de electrónica que necesitan detectar los niveles de radiación UV, como estaciones meteorológicas, monitores de índice UV o dispositivos que alertan sobre quemaduras solares.
 
+
+![image](https://github.com/user-attachments/assets/1fbef57b-d9c9-41c5-a716-51c71ee3cc81)
+
+
+
 El sensor dispone de un fotosensor sensible a la luz ultravioleta y cuando la luz UV incide sobre este fotosensor, se genera una corriente eléctrica que es transformada por un amplificador interno en una señal de voltaje analógica.  
 La clave de su funcionamiento es que este voltaje de salida es **directamente proporcional** a la intensidad de la luz UV detectada. Es decir, a mayor intensidad UV, mayor será el voltaje que entregará el sensor.
 
