@@ -72,8 +72,11 @@ Este nivel corresponde a la escala de intensidad definida por la OMS, para lo cu
 
 ## Emision de las Alertas :
 
-Nival 1-2 Bajo:  Se emite una alerta temporal sonora en el parlante para recordar al atleta que la intensidad es baja,  se muestran LED de color verde o blanco y se muestra la intensidad UV en la pantalla
-Nivel 3-4 Medio: Sonido en el parlante que indica que los usuarios del nivel medio pero manteniendo precauciones como uso de crema bloqueadora y ropa protectora
-Nivel 6-7 Alto:  Sonido en parlante que indica la peligrosidad de la intensidad y recomendaciones de evitar estar al aire libre
-Nivel 8-11 Muy Alto:  Alerta sonora que indica la alta peligrosidad de hacer deporte y solicita a los usuarios detenerse de hacer deporte. 
+Nival 1-2 Bajo:  Se emite una alerta temporal sonora en el parlante para recordar al atleta que la intensidad es baja,  se muestran LED de color verde o blanco y se muestra la intensidad UV en la pantalla <br>
+
+Nivel 3-4 Medio: Sonido en el parlante que indica que los usuarios del nivel medio pero manteniendo precauciones como uso de crema bloqueadora y ropa protectora <br>
+
+Nivel 6-7 Alto:  Sonido en parlante que indica la peligrosidad de la intensidad y recomendaciones de evitar estar al aire libre <br>
+
+Nivel 8-11 Muy Alto:  Alerta sonora que indica la alta peligrosidad de hacer deporte y solicita a los usuarios detenerse de hacer deporte. <br>
 
