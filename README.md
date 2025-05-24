@@ -40,7 +40,7 @@ El proyecto UVision de detección de luz ultravioleta incluye un sensor de este 
 
 La variación del voltaje respecto a la intensidad de luz varía en forma **lineal** y puede ser expresada mediante una ecuación, para lo cual es necesario realizar un cálculo aproximado con los datos del fabricante.
 
-### Función aproximada del ML8511Ñ
+### Función aproximada del ML8511
 
 Según la hoja del fabricante del ML8511 (https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/ML8511_3-8-13.pdf) y documentación de ejemplos prácticos (como los de SparkFun), la relación típica es la siguiente:
 
@@ -72,5 +72,8 @@ Este nivel corresponde a la escala de intensidad definida por la OMS, para lo cu
 
 ## Emision de las Alertas :
 
-Nival 1-1 Bajo:  Se emite una alerta temporal sonora en el parlante sobre 
+Nival 1-2 Bajo:  Se emite una alerta temporal sonora en el parlante para recordar al atleta que la intensidad es baja,  se muestran LED de color verde o blanco y se muestra la intensidad UV en la pantalla
+Nivel 3-4 Medio: Sonido en el parlante que indica que los usuarios del nivel medio pero manteniendo precauciones como uso de crema bloqueadora y ropa protectora
+Nivel 6-7 Alto:  Sonido en parlante que indica la peligrosidad de la intensidad y recomendaciones de evitar estar al aire libre
+Nivel 8-11 Muy Alto:  Alerta sonora que indica la alta peligrosidad de hacer deporte y solicita a los usuarios detenerse de hacer deporte. 
 
