@@ -5,3 +5,4 @@ Arduino Nano Hoja del Fabricante
 https://docs.arduino.cc/resources/datasheets/A000005-datasheet.pdf
 
 Modulo de Sonido DF PLayer Hoja del Fabricante
+https://picaxe.com/docs/spe033.pdf
