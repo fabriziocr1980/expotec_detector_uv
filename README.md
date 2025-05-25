@@ -1,7 +1,7 @@
 ## Expotec Sensor de Luz Ultravioleta UVision
 
 
-El proyecto UVision es una iniciativa dedicada a la detección y alerta de niveles de luz ultravioleta (UV), diseñada para proteger a quienes realizan actividades al aire libre. Hemos desarrollado un dispositivo compacto y eficiente utilizando un Arduino Nano, un sensor UV ML8511, una pantalla OLED 128x64 y un módulo de sonido DFPPlayer. Todos estos componentes están interconectados en una protoboard, creando un sistema robusto y fácil de implementar.
+El proyecto UVision es una iniciativa dedicada a la detección y alerta de niveles de luz ultravioleta (UV), diseñada para proteger a quienes realizan actividades al aire libre. Se ha desarrollado un dispositivo compacto y eficiente utilizando un Arduino Nano, un sensor UV ML8511, una pantalla OLED 128x64 y un módulo de sonido DFPPlayer. Todos estos componentes están interconectados en una protoboard, creando un sistema robusto y fácil de implementar.
 
 
 ## Problemática actual
