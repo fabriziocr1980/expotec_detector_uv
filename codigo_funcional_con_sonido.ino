@@ -3,7 +3,6 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-
 //// CONFIGURACION DE SONIDO ////////
 #include "DFRobotDFPlayerMini.h"
 #include "SoftwareSerial.h"
@@ -11,6 +10,7 @@ static const uint8_t PIN_MP3_TX = 8; // D7
 static const uint8_t PIN_MP3_RX = 7; // D6
 SoftwareSerial softwareSerial(PIN_MP3_RX, PIN_MP3_TX);
 DFRobotDFPlayerMini player;
+
 
 //// CONFIGURACION DE LA PANTALLA ////////
 #define PANTALLA_ANCHO 128
@@ -44,8 +44,8 @@ void mostrarMensajeUV(float indice, const char* peligro) {
   display.print("Indice UV:");
 
   display.setTextSize(2);
-  display.setCursor(80, 5);  // Posicion en pantalla
-  display.print(indice, 1);  // 
+  display.setCursor(80, 5);  // Ajusta si necesitas moverlo más
+  display.print(indice, 1);  // Un decimal
   // Línea divisoria horizontal
   //display.drawLine(0, 30, SCREEN_WIDTH, 30, SSD1306_WHITE);
 
@@ -116,12 +116,15 @@ void loop()
   Serial.println();
   Serial.print("UV Intensidad: ");
   Serial.print(uv_intensidad);
-  //delay(1000);
+  delay(800);
 
   //const char* nivelPeligro = "Alto";
   const char* nivelPeligro = nivelPeligroUV(uv_intensidad);
-   
+  mostrarMensajeUV(uv_intensidad, nivelPeligro);  // Llamada a la función para mostrar en pantalla
+  
+  // Chequeo de intensidad y 
   if (uv_intensidad >= 6) {
+     player.volume(28);
      player.play(1);
      delay(6000);
   }
@@ -129,12 +132,11 @@ void loop()
     Serial.print(" No emitir sonido ");
   }
 
-  mostrarMensajeUV(uv_intensidad, nivelPeligro);  // Llamada a la función para mostrar en pantalla
   Serial.println();
-
 }
 
-// Funcion para sacar un promedio de lecturas
+//Takes an average of readings on a given pin
+//Returns the average
 int averageAnalogRead(int pinToRead)
 {
   byte numberOfReadings = 8;
@@ -154,6 +156,7 @@ float mapfloat(float x, float in_min, float in_max, float out_min, float out_max
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+// Rangos de UV de acuerdo a tabla de la OMS
 const char* nivelPeligroUV(float index) {
   if (index < 3) return "Bajo";
   else if (index < 6) return "Moderado";
