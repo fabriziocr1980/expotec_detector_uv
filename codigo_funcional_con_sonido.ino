@@ -11,6 +11,11 @@ static const uint8_t PIN_MP3_RX = 7; // D6
 SoftwareSerial softwareSerial(PIN_MP3_RX, PIN_MP3_TX);
 DFRobotDFPlayerMini player;
 
+// CONFIGURACION DE SEMAFORO ///////
+int ledBlanco = 5;
+int ledVerde = 4;
+int ledAmarillo = 3;
+int ledRojo = 2;  //D2
 
 //// CONFIGURACION DE LA PANTALLA ////////
 #define PANTALLA_ANCHO 128
@@ -84,6 +89,11 @@ void setup() {
     Serial.println("Connecting to DFPlayer Mini failed!");
   }
 
+  // Definicion de leds
+  pinMode(ledRojo, OUTPUT);
+  pinMode(ledBlanco, OUTPUT);
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAmarillo, OUTPUT);
 
   // // Puedes modificar estos valores para probar otros niveles
   // float indiceUV = 9.0;
@@ -124,8 +134,8 @@ void loop()
   
   // Chequeo de intensidad y 
   if (uv_intensidad >= 6) {
-     player.volume(28);
-     player.play(1);
+     player.volume(60);
+     player.play(4);
      delay(6000);
   }
   else {
@@ -158,9 +168,39 @@ float mapfloat(float x, float in_min, float in_max, float out_min, float out_max
 
 // Rangos de UV de acuerdo a tabla de la OMS
 const char* nivelPeligroUV(float index) {
-  if (index < 3) return "Bajo";
-  else if (index < 6) return "Moderado";
-  else if (index < 8) return "Alto";
-  else if (index < 11) return "Muy Alto";
-  else return "Extremo";
+  if (index < 3) {
+    digitalWrite(ledBlanco, HIGH);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarillo, LOW);
+    digitalWrite(ledRojo, LOW);
+    return "Bajo";
+  }
+  else if (index < 6) {  
+    digitalWrite(ledBlanco, LOW);
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledAmarillo, LOW);
+    digitalWrite(ledRojo, LOW);
+    return "Moderado";
+    }
+  else if (index < 8) {
+    digitalWrite(ledBlanco, LOW);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarillo, HIGH);
+    digitalWrite(ledRojo, LOW);
+    return "Alto";
+    }
+  else if (index < 11) {
+    digitalWrite(ledBlanco, LOW);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarillo, LOW);
+    digitalWrite(ledRojo, HIGH);    
+    return "Muy Alto";
+    }
+  else {
+    digitalWrite(ledBlanco, LOW);
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarillo, LOW);
+    digitalWrite(ledRojo, HIGH); 
+     return "Extremo";
+  }
 }
